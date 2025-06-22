@@ -1,0 +1,209 @@
+/* ====== Reset Básico ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ====== Hero ====== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  animation: neon 2s infinite alternate;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 1rem 0 2rem;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #0ff4;
+  color: #0ff;
+  border: 1px solid #0ff;
+  border-radius: 8px;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-cta:hover {
+  background: #0ff7;
+  transform: scale(1.05);
+}
+
+/* ====== Sección Sobre mí ====== */
+.about {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0ff;
+}
+
+.about p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+.foto-vanessa {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1rem auto;
+  display: block;
+  border: 3px solid #0ff;
+  box-shadow: 0 0 20px #0ff6;
+}
+
+/* ====== Proyectos ====== */
+.repos {
+  padding: 4rem 2rem;
+}
+
+.repos h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #0ff;
+}
+
+.repo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.repo-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 20px #0ff4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.repo-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 30px #0ff;
+}
+
+.repo-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #222;
+  display: block;
+  box-shadow: 0 0 10px #0ff3;
+}
+
+.repo-card h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: 0 0 5px #0ff;
+  margin-bottom: 0.5rem;
+  min-height: 48px;
+}
+
+.repo-card a {
+  display: inline-block;
+  margin-top: auto;
+  color: #0ff;
+  text-decoration: none;
+}
+
+/* ====== Contacto ====== */
+.contacto {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #0ff;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  color: #0ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.contact-links a:hover {
+  border-color: #0ff;
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+  background: #0a0a0a;
+}
+
+/* ====== Animaciones ====== */
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #0ff, 0 0 35px #0ff;
+  }
+}
